@@ -11,7 +11,7 @@ function LectureTemplate(props) {
     <li className="w-full border-2 border-gray-100 bg-white rounded-lg  shadow-lg mb-5 pb-5 font-semibold">
     <div className="flex flex-col  justify-between w-full p-3 space-x-6  ">
        <div className="mb-2 sm:mb-0">
-  <h3 className="font-medium text-gray-900 truncate">Lecture # {props.id}
+  <h3 className="font-medium text-gray-800 truncate">Lecture # {props.id}
   <span className="text-gray-500 pl-3">({props.date})</span>
   
   </h3>
