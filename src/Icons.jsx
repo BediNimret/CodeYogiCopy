@@ -1,13 +1,17 @@
 import React from "react";
-import { BrowserRouter, Routes, Route ,Link} from "react-router-dom";
+import { Link} from "react-router-dom";
 
 function Icons(props) {
+  const path=props.href.split("/");
   return (
     
-            <div className=" flex   ">
-              <props.icon className="text-gray-300 m-2 text-3xl" />
-              <Link to={props.href} className="text-gray-300 px-2 py-2 text-lg ">{props.text}</Link>
-            </div>
+    <Link to={props.href} className=" text-lg ">
+    <button className=" flex justify-start items-center hover:bg-gray-700 rounded-md w-full text-gray-300 hover:text-white " 
+    id={props.location === path[1] ? "active" : ""}>
+    <props.icon className=" m-2 text-3xl" />
+    <p>{props.text}</p>
+    </button>
+    </Link>
   );
 }
 
