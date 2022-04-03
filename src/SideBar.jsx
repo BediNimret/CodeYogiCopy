@@ -29,7 +29,7 @@ function SideBar() {
             </div>
             <div className="flex flex-col ">
             <Icons href="/PersonalData" icon={CgProfile} text="Profile" location={path[1]}/>
-              <Icons href="/Lectures"  icon={BiLogOut} text="Logout" location={path[1]}/> 
+              <Icons href="/*"  icon={BiLogOut} text="Logout" location={path[1]}/> 
              </div>
             </div>
             </div>
