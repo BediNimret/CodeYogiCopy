@@ -10,7 +10,7 @@ function AssignmentDetails() {
   
   const info=data.filter(t => n === t.id);
 
-  console.log(!info);
+ 
   
   
   return(

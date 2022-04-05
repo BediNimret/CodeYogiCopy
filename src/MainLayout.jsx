@@ -9,7 +9,7 @@ function MainLayout() {
   return ( 
   <div className=" h-screen  flex items-stretch">
       
-       <div className="fixed   right-4 top-4 ">
+       <div className="sticky   right-4 top-4 ">
        <button className=" bg-white border-gray-500 border  rounded-full text-gray-500">
        <BiArrowBack className="text-2xl m-1" />
        </button>    

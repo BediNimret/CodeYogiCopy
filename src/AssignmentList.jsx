@@ -15,7 +15,7 @@ function AssignmentList() {
     <div className="flex items-center flex-col m-5 justify-center px-4 py-4 mt-2 bg-white sm:px-6 lg:px-8">
     
    
-    {data.map(li => <AssignmentTemplate id={li.id} duedate={li.duedate} date={li.date} description={li.description}  title={li.title} submitStatus={li.submitted}> </AssignmentTemplate>)}
+    {data.map(li => <AssignmentTemplate id={li.id} key={li.id} duedate={li.duedate} date={li.date} description={li.description}  title={li.title} submitStatus={li.submitted}> </AssignmentTemplate>)}
      
   
   </div>

@@ -4,12 +4,12 @@ import {AiOutlineCheckCircle} from "react-icons/ai";
 import {BsDownload} from "react-icons/bs";
 
 function AssignmentTemplate(props) {
-    
-    let url="../Assignments/"+props.id+"/Details";
+    const key= props.id;
+    let url="../Assignments/"+key+"/Details";
     
   return(
     <ul className="w-full relative ">
-    <li className="w-full border-2 border-gray-100 bg-white rounded-lg  shadow-lg mb-5 pb-5 font-semibold">
+    <li className="w-full border-2 border-gray-100 bg-white rounded-lg  shadow-lg mb-5 pb-5 font-semibold" key={key}>
    <Link to= {url}>
     <div className="flex flex-col  justify-between w-full p-3 space-x-6  ">
        <div className="mb-2 sm:mb-0">

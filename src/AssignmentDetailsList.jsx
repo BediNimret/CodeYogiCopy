@@ -8,7 +8,7 @@ function AssignmentDetailsList(props) {
   return(
    
             <div className="mt-5 border-t border-gray-200 w-full">
-                <dl className="sm:divide-y sm:divide-gray-200">
+              <dl className="sm:divide-y sm:divide-gray-200"  >
                    <div className="items-center py-4 sm:py-5 sm:grid sm:grid-cols-3 sm:gap-4">
                      <dt className="text-sm font-medium text-gray-500">Title</dt>
                      <dd className="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">{props.title}</dd>

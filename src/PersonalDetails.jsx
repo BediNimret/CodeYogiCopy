@@ -3,6 +3,7 @@ import data from "./mockdata/StudentData";
 import {AiOutlineCheckCircle} from "react-icons/ai";
 import {BsDownload} from "react-icons/bs";
 import InputBox from "./InputBox";
+ 
 
 function PersonalDetails() {
     
