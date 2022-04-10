@@ -2,6 +2,20 @@
 @tailwind components;
 @tailwind utilities;
 
+input[type=text] {
+  width: 100%;
+  
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: 3px solid #ccc;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  outline: none;
+}
+
+input[type=text]:focus {
+  border: 3px solid #555;
+}
 .btn-grad {background-image: linear-gradient(to right, #314755 0%, #26a0da  51%, #314755  100%)}
 .btn-grad {
    margin: 10px;

@@ -19,14 +19,14 @@ function LectureTemplate(props) {
   </div>
   <div className="wmde-markdown wmde-markdown-color flex-shrink-0 inline-block mt-3 p-1 py-2 text-sm font-medium">
    
-  
+  <p className="mt-1 text-sm text-gray-500 truncate">Topics: {props.topics}</p>
 
-  {props.topics.map(li => <ListDisplay disc={disc} topic={li.title}> </ListDisplay>)}
+  
   </div>
     </div>
     <div className="flex flex-1 px-2 sm:px-8 justify-center items-center text-gray-600 ">
     <BsDownload/>
-    <span className="ml-1 sm:ml-3 ">Watch/Download Recording</span>
+    <a href={props.recording_url} className="ml-1 sm:ml-3 ">Watch/Download Recording</a>
   </div> 
   
   </li>
@@ -36,3 +36,4 @@ function LectureTemplate(props) {
 }
 
 export default  LectureTemplate;
+//{props.topics.map(li => <ListDisplay disc={disc} topic={li.title}> </ListDisplay>)}
