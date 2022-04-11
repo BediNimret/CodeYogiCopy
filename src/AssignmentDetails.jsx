@@ -1,15 +1,25 @@
 import React from "react";
 import AssignmentDetailsList from "./AssignmentDetailsList";
-import data from "./mockdata/assignmentData"; 
 import {useParams} from "react-router-dom";
+import axios, { Axios } from "axios";
+
 function AssignmentDetails() {
   let number =useParams();
-  
   let n =+(number.AssignmentNumber);
-
   
-  const info=data.filter(t => n === t.id);
 
+  let [list,updateAssignment] =React.useState([]);
+ 
+ React.useEffect(() => {
+   const data=axios.get(`https://api.codeyogi.io/batches/1/assignments/`,{withCredentials:true,});
+    data.then((response) =>{
+        const value=response.data;
+        updateAssignment(value);
+     });
+  },[]);
+
+  const info=list.filter(t => n === t.id);
+  
  
   
   
@@ -25,7 +35,7 @@ function AssignmentDetails() {
           {info.length===0 && <h1>This Assignment does not exixts </h1>
          }
          
-         {info.length>0 && <AssignmentDetailsList duedate={info[0].duedate}  description={info[0].description}  title={info[0].title}/>} 
+         {info.length>0 && <AssignmentDetailsList duedate={info[0].due_date} submitStatus={info[0].submissions} description={info[0].description}  title={info[0].title}/>} 
          
         
             
@@ -37,3 +47,6 @@ function AssignmentDetails() {
 }
 
 export default  AssignmentDetails;
+
+
+

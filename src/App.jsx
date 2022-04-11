@@ -23,7 +23,7 @@ function App() {
     <Route path="Assignments" element={<AssignmentList />} />
     <Route path="Lectures" element={<LectureList />} />
     <Route path="PersonalData" element={<PersonalDetails />} />
-    <Route path="Assignments/:AssignmentNumber/Details" element={<AssignmentDetails />} />
+    <Route path="Assignments/:AssignmentNumber/details" element={<AssignmentDetails />} />
     <Route path="StudentPage" element={<StudentData />} />
 </Route>   
 <Route path="Quiz" element={<QuizPage />} />
