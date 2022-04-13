@@ -6,11 +6,8 @@ import MDEditor from "@uiw/react-md-editor";
 import { DateTime } from "luxon";
 
 function LectureTemplate(props) {
-    const end =DateTime.fromISO(props.end)
-    const start =DateTime.fromISO(props.start)
-    const diff = end.diff(start).toFormat("hh':'mm':'ss ");
     
-    console.log(diff)
+    const diff = DateTime.fromISO(props.end).diff(DateTime.fromISO(props.start)).toFormat("hh':'mm':'ss ");
   return(
     <ul className="w-full relative ">
       

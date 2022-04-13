@@ -23,7 +23,7 @@ function AssignmentTemplate(props) {
     <ul className="w-full  ">
       { show && <PopUp onClick={toggle} id={props.id} />}
        
-    <li className="w-full border-2 border-gray-100 bg-white rounded-lg  shadow-lg mb-5 pb-5 font-semibold" key={key}>
+    <li className="w-full border-2 border-gray-100 bg-white rounded-lg  shadow-lg  mb-5 font-semibold" key={key}>
    <Link to= {url}>
     <div className="flex flex-col  justify-between w-full p-3 space-x-6  ">
        <div className="mb-2 sm:mb-0">
