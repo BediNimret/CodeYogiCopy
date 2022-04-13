@@ -2,6 +2,7 @@ import React from "react";
 import MDEditor from "@uiw/react-md-editor";
 import SubmitPage from "./SubmitPage";
 import PopUp from "./PopUp";
+import { DateTime } from "luxon";
 
 function AssignmentDetailsList(props) {
    const current = new Date();
@@ -15,7 +16,7 @@ function AssignmentDetailsList(props) {
   return(
    
             <div className="mt-5 border-t border-gray-200 w-full">
-              { show && <PopUp onClick={toggle}/>}
+              { show && <PopUp onClick={toggle} id={props.id}/>}
               <dl className="sm:divide-y sm:divide-gray-200"  >
                    <div className="items-center py-4 sm:py-5 sm:grid sm:grid-cols-3 sm:gap-4">
                      <dt className="text-sm font-medium text-gray-500">Title</dt>
@@ -23,7 +24,7 @@ function AssignmentDetailsList(props) {
                    </div>
                    <div className="items-center py-4 sm:py-5 sm:grid sm:grid-cols-3 sm:gap-4">
                      <dt className="text-sm font-medium text-gray-500">Due Date</dt>
-                     <dd className="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">{props.duedate}</dd>
+                     <dd className="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">{DateTime.fromISO(props.duedate).toLocaleString(DateTime.DATE_FULL)}</dd>
                    </div>
                    <div className="items-center py-4 sm:py-5 sm:grid sm:grid-cols-3 sm:gap-4">
                      <dt className="text-sm font-medium text-gray-500">Description</dt>

@@ -35,7 +35,7 @@ function AssignmentDetails() {
           {info.length===0 && <h1>This Assignment does not exixts </h1>
          }
          
-         {info.length>0 && <AssignmentDetailsList duedate={info[0].due_date} submitStatus={info[0].submissions} description={info[0].description}  title={info[0].title}/>} 
+         {info.length>0 && <AssignmentDetailsList duedate={info[0].due_date} id={info[0].id} submitStatus={info[0].submissions} description={info[0].description}  title={info[0].title}/>} 
          
         
             

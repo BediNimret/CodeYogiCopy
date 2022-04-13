@@ -22,8 +22,8 @@ function LectureList() {
     
   <div className="flex items-center flex-col m-5 justify-center px-4 py-4 mt-2 bg-white sm:px-6 lg:px-8">
   
-    {list.map(li => <LectureTemplate id={li.id} date={li.created_at} duration={li.updated_at} recording_url={li.recording_url} topics={li.topic}> </LectureTemplate>)}
-   
+    {list.map(li => <LectureTemplate id={li.id} date={li.created_at} end={li.end_time} start={li.start_time} recording_url={li.recording_url} topics={li.topic}> </LectureTemplate>)}
+
   </div>
   </div>
   );

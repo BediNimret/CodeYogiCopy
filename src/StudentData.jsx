@@ -19,14 +19,14 @@ let i=0;
   },[]);
 
   
- let text=" "
+ 
   return ( 
     <div className="h-full p-3 max-w-screen-lg mx-auto">
     <h1 className="  text-xl font-bold sm:text-2xl"> Meet Our Team</h1>
     <p className=" ">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magni dolore dolorum rerum, quasi eum officia neque debitis quas aliquam nulla nam ducimus architecto molestiae et aut quae asperiores minima voluptatum?</p>
    
     <div className="flex flex-wrap justify-between bg-gray-100 ">
-    {responseList.map(li =><PlaCard image={image[i++]}name={li.name.title.concat(text,li.name.first,text,li.name.last)} post={li.email} tlink="https://twitter.com/"  llink="https://in.linkedin.com/"></PlaCard>)}   
+    {responseList.map(li =><PlaCard image={image[i++]}name={`${li.name.title} ${li.name.first} ${li.name.last}`} post={li.email} tlink="https://twitter.com/"  llink="https://in.linkedin.com/"></PlaCard>)}   
   
     </div>
   </div>
