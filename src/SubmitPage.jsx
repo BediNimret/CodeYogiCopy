@@ -9,7 +9,7 @@ function SubmitPage(props) {
   
   return(
     
-    <div className="flex flex-1 px-2 pt-4 sm:px-8 justify-center items-center text-green-600 ">
+    <div className="flex flex-1 px-2  sm:px-8 justify-center items-center text-green-600 ">
     {props.submitStatus.length===0 && < div className="flex justify-center items-center">
     <AiOutlineCheckCircle className="text-2xl"/>
     <button className="ml-1 sm:ml-3" onClick={props.onClick}>Submit</button>

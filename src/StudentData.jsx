@@ -1,7 +1,7 @@
 import axios, { Axios } from "axios";
 import React, {useState ,  useEffect  } from "react";
 import PlaCard from "./PlaCard";
-
+import {StudentInfo} from "./Api"
 
 function StudentData() {
 let i=0;
@@ -10,7 +10,7 @@ let i=0;
  let image =["/Picture1.jpg","/Picture2.jpg","/Picture3.jpg","/Picture4.jpg","/Picture5.jpg","/Picture6.jpg"];
  
  useEffect(() => {
-   const data=axios.get(`https://randomuser.me/api/?results=6`);
+   const data=StudentInfo();
     data.then((response) =>{
         const value=response.data.results;
         updateResponse(value);

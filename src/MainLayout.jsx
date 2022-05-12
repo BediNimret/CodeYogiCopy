@@ -7,22 +7,22 @@ import {BiArrowBack} from "react-icons/bi";
 function MainLayout() {
     
   return ( 
-  <div className=" h-screen  relative flex items-stretch">
+  <div className=" h-screen  relative flex justify-center items-stretch">
       
-       <div className="sticky   right-4 top-4 ">
+       <div className="fixed   right-16 top-8 ">
        <button className=" bg-white border-gray-500 border  rounded-full text-gray-500">
        <BiArrowBack className="text-2xl m-1" />
        </button>    
       
 </div>
       <div className="w-48 overflow-clip">
-      <SideBar/>
+       <SideBar/>
       </div>
       <div className=" h-fit p-5 bg-gray-50  w-4/5 overflow-clip">
          
          
           <Outlet/>
-          
+           
           </div>
           </div>
   

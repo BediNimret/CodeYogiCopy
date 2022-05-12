@@ -1,6 +1,7 @@
 import React from 'react';
 import {ImCross} from "react-icons/im";
 import axios from 'axios';
+import * as yup from 'yup';
 
 function PopUp(props) {
   const[input,UpdateInput]=React.useState([]);
@@ -9,10 +10,20 @@ function PopUp(props) {
   {
     UpdateInput(event.target.value)
   }
-  
+   
+  const UrlValidation = () => {
+    try{
+    const url= yup.string().url("Invalid url entered");
+    console.log(url.validateSync(input));
+    }
+    catch(e) 
+    {
+      console.log(e.message); 
+    }
+    
+  }
   React.useEffect ( () => {
-   const data = axios.put(`https://api.codeyogi.io/assignment/${props.id}/submit`,{submissionLink:input},{withCredentials:true,});
-   console.log(data);
+  axios.put(`https://api.codeyogi.io/assignment/${props.id}/submit`,{submissionLink:input},{withCredentials:true,}); 
   });
  
   return (
@@ -26,7 +37,7 @@ function PopUp(props) {
         <hr className='border-1 w-full border-slate-400 shadow-lg space-y-4'/> 
         <div className='flex space-x-2 items-center'>
     <h2 className=" text-start">Submission_Link</h2>
-      <input type="text" className=' h-8 border-gray-400' onChange={changeInput} value={input}/>
+      <input type="text" className=' h-8 border-gray-400' onChange={changeInput} onBlur={UrlValidation} value={input}/>
       </div>
       <hr className='border-1 w-full border-slate-400 shadow-lg'/> 
       <button onClick={!(input.length===0)? props.onClick:""} className="text-white bg-blue-600 hover:bg-blue-800 rounded-lg p-2 w-1/3 mt-3">Submit</button>

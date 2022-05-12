@@ -1,6 +1,6 @@
 import React from "react";
 import AssignmentTemplate from "./AssignmentTemplate";
-import data from "./mockdata/assignmentData";
+import {AssignmentDetail} from "./Api";
 
 import axios, { Axios } from "axios";
 
@@ -10,7 +10,7 @@ function AssignmentList() {
   let [list,updateAssignment] =React.useState([]);
  
  React.useEffect(() => {
-   const data=axios.get(`https://api.codeyogi.io/batches/1/assignments/`,{withCredentials:true,});
+   const data=AssignmentDetail();
     data.then((response) =>{
         const value=response.data;
         updateAssignment(value);

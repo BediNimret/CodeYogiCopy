@@ -1,14 +1,14 @@
 import React ,{useEffect} from "react";
 import LectureTemplate from "./LectureTemplate";
 import axios, { Axios } from "axios";
-
+import {LectureDeatils} from "./Api";
 
 function LectureList() {
   let [list,updateLecture] =React.useState([]);
  
  useEffect(() => {
-   const data=axios.get(`https://api.codeyogi.io/batches/1/sessions/`,{withCredentials:true,});
-    data.then((response) =>{
+   const promise=LectureDeatils();
+   promise.then((response) =>{
         const value=response.data;
         updateLecture(value);
      });

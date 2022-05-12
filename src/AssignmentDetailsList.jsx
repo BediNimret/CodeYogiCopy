@@ -31,8 +31,8 @@ function AssignmentDetailsList(props) {
                      <dd className="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2"><MDEditor.Markdown source={props.description} className="pb-2 pr-2 pt-2 rounded-md" /></dd>
                    </div>
                 </dl>
-                <div className="py-4 sm:py-5 sm:gap-4">
-                  <div className="flex items-center">
+                <div className=" ">
+                  <div className="flex items-center border-t border-gray-200">
                   <SubmitPage onClick={toggle} submitStatus={props.submitStatus} ></SubmitPage>
              </div>
              { (due.localeCompare(date)===-1) &&
